@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block content %}
+<p class="log_list_text"></p>
+  {% for item in log_list %}
+  <div class="log">
+    <div class="day">
+      <p>{{item["logday"]}}</p>
+      <!-- <p>月</p> -->
+    </div>
+    <div class="previos">
+      <p>({{item["log_hyouka"]}}</p>
+      <p>%)</p>
+
+
+    </div>
+    <p>{{item["log_txt"]}}</p>
+    <!-- <a href="/logedit/{{item['logid']}}">編集</a>
+    <form action="/logdel" method="post"> -->
+      <!-- <input type="hidden" name="logid" value="{{item['logid']}}">
+      <input type="submit" name="delete" value="削除する"> -->
+    <!-- </form><br><br> -->
+    
+
+  </div>
+    {% endfor %}
+
+  {% endblock %}

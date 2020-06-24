@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="book_view">
+  <a href="/bookadd" class="add_book">新しく追加する</a>
+  {% for item in book_list %}
+  <div class="book_list">
+    <div class="select_book">
+      <p>{{item["bookname"]}}</p>
+    </div>
+    <div class="book_action">
+      <!-- <a href="#" class="edit_book">選択した教材を編集</a>
+                <a href="#" class="remove_book">選択した教材を削除</a> -->
+      <a href="/bookedit/{{item['bookid']}}"><input id="select" type="submit" value="編集"></a>
+      <form action="/bookdel" method="post">
+        <input type="hidden" name="bookid" value="{{item['bookid']}}">
+        <input id="delete" type="submit" name="delete" value="削除する">
+      </form><br><br>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+
+  {% endblock %}

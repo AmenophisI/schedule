@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% block content %}
+
+<form action="/bookadd" method="POST">
+    <div class="book_add">
+        <div class="book_name">教材名</div>
+        <input type="text" name="bookname" class="book_form">
+        <div class="from">
+            <input type="number" name="book_start" class="form_number">
+            <div class="from_ja">から</div>
+        </div>
+        <div class="to">
+            <input type="number" name="book_goal" class="to_number">
+            <div class="to_ja">までを</div>
+        </div>
+        <div class="book_add_by">
+            <input type="number" name="enddays" class="by_number">
+            <div class="by_ja">日後までにやる！</div>
+        </div>
+        <input id="calculation" type="submit" value="登録する">
+    </div>
+</form>
+
+{% endblock %}

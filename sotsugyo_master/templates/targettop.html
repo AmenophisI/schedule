@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+  <!-- <a href="/targetadd">--目標の新規追加--</a>
+
+  {% for item in target_list %}
+    <p>{{item["target"]}}</p>
+    <p>{{item["kadai_1"]}}</p>
+    <p>{{item["kadai_1_gday"]}}</p>
+    <p>{{item["kadai_2"]}}</p>
+    <p>{{item["kadai_2_gday"]}}</p> 
+    <p>{{item["kadai_3"]}}</p>
+    <p>{{item["kadai_3_gday"]}}</p>
+    <p>{{item["kadai_4"]}}</p>
+    <p>{{item["kadai_4_gday"]}}</p>
+    <p>{{item["kadai_5"]}}</p>
+    <p>{{item["kadai_5_gday"]}}</p> 
+    
+    <a href="/targetedit/{{item['targetid']}}">編集する</a>
+    <form action="/targetdel" method="post">
+      <input type="hidden" name="targetid" value="{{item['targetid']}}">
+      <input type="submit" name="delete" value="削除する">
+    </form><br><br>  
+  {% endfor %} -->
+
+  <div class="target">
+    <a href="/targetadd"><input id="add_target" type="submit" value="新規追加"></a>
+{% for item in target_list %}
+    <h1>{{item["target"]}}</h1>
+    <div class="target_schedule">
+      <div class="first">
+        <p>{{item["kadai_1_gday"]}}までに</p>
+
+        <p class="target_text">{{item["kadai_1"]}}</p>
+      </div>
+      <div class="second">
+        <p>{{item["kadai_2_gday"]}}までに</p>
+
+        <p class="target_text">{{item["kadai_2"]}}</p>
+      </div>
+      <div class="third">
+        <p>{{item["kadai_3_gday"]}}までに</p>
+
+        <p class="target_text">{{item["kadai_3"]}}</p>
+      </div>
+      <div class="targettop">
+        <a href="/targetedit/{{item['targetid']}}"><input class="target_edit" type="submit" value="編集する"></a>
+        <form action="/targetdel" method="post">
+          <input type="hidden" name="targetid" value="{{item['targetid']}}">
+          <input class="target_edit" type="submit" name="delete" value="削除する">
+          
+        </form>
+      </div>
+  {% endfor %}
+    </div>
+
+  {% endblock %}

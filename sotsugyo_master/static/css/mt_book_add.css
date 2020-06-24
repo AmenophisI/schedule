@@ -1,0 +1,73 @@
+.book_add{
+    padding-top: 120px;
+    text-align: center;
+}
+
+.book_name{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.book_form{
+    width: 332px;
+    height: 54px;
+    margin-top: 40px;    
+}
+
+.from{
+    display: flex;
+    margin-top: 49px;
+    margin-left: 69px;
+}
+
+.form_number{
+    width: 130px;
+    height: 43px;
+}
+.from_ja{
+    display: flex;
+    align-items: center;
+}
+
+.to{
+    display: flex;
+    margin-top: 18px;
+    margin-left: 69px;
+}
+
+.to_number{
+    width: 130px;
+    height: 43px;
+}
+.to_ja{
+    display: flex;
+    align-items: center;
+}
+
+.by{
+    display: flex;
+    margin-top: 18px;
+    margin-left: 69px;
+}
+
+.by_number{
+    width: 130px;
+    height: 43px;
+}
+.by_ja{
+    display: flex;
+    align-items: center;
+}
+
+#calculation{
+    font-size: 20px;
+    width: 332px;
+    height: 68px;
+    margin-top: 80px;
+    background-color: white;
+    border-bottom: 4px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px -2px #555,
+    3px 3px 8px rgba(255, 255, 255, 0.8) inset;
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="./css/book_add.css">
+    <link rel="stylesheet" href="./css/hum.css">
+     -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Document</title>
+</head>
+
+<body style="margin-top: 0;">
+    <header>
+        <nav>
+            <ul class="header_link">
+                <li><a href="/todotop"><i class="fas fa-home fa-2x"></i>ホーム</a></li>
+                <li><a href="/schedule_list"><i class="fas fa-calendar-check fa-2x"></i>スケジュール</a></li>
+                <li><a href="/targettop"><i class="fas fa-bullseye fa-2x"></i>目標</a></li>
+            </ul>
+            <div class="hum_menu">
+                <div class="buns"></div>
+                <div class="patty"></div>
+                <div class="buns"></div>
+            </div>
+
+            <!-- リンク -->
+            <ul class="hum_link">
+                <!-- <li class="user_name">○○さん</li> -->
+                <li><a href="/bookmanage">教材</a></li>
+                <!-- <li><a href="#">目標の確認・編集</a></li> -->
+                <li><a href="/log_list">過去の記録</a></li>
+                <li><a href="/userinfo">ユーザー情報変更</a></li>
+            </ul>
+        </nav>
+        <script src="../static/js/app.js"></script>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

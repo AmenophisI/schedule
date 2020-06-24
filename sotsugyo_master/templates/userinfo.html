@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p class="paddingtop"></p>
+<div class="userinfo">
+  <h1>ユーザー情報</h1>
+    <!-- <p>{{userid}}</p> -->
+    <dis class="username">
+      <p>ユーザー名</p>
+      <p>{{username}}</p>
+    </dis>
+    <dis class="userpass">
+      <p>パスワード</p>
+      <p>{{pwd}}</p>
+    </dis>
+    <dis class="usermail">
+      <p>メールアドレス</p>    
+      <p>{{mailadd}}</p> 
+    </dis>
+      <a href="/useredit/{{userid}}"><input id="result" type="submit" value="編集する"></a>
+</div>
+{% endblock %}

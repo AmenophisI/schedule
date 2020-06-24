@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% block content %}
+
+    <form action="/targetadd" method="POST">
+
+        <div class="target">
+            <!-- textareaをinput textにしてます -->
+            <input type="text" class="big_target" name="target" placeholder="例）英検3級合格">
+            <div class="target_schedule">
+                <div class="first">
+                    <div>
+                        <input type="text" class="by" name="kadai_1_gday">
+                        <p>までに</p>
+                    </div>
+
+                    <textarea rows="4" cols="33" name="kadai_1" placeholder="例）単語を覚える"></textarea>
+                </div>
+                <div class="second">
+                    <div>
+                        <input type="text" class="by" name="kadai_2_gday">
+                        <p>までに</p>
+                    </div>
+
+                    <textarea rows="4" cols="33" name="kadai_2" placeholder="例）文法確認"></textarea>
+                </div>
+                <div class="third">
+                    <div>
+                        <input type="text" class="by" name="kadai_3_gday">
+                        <p>までに</p>
+                    </div>
+                    <textarea rows="4" cols="33" name="kadai_3" placeholder="例）長文演習"></textarea>
+                </div>
+            </div>
+            <input id="save" type="submit" value="登録する">
+
+
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+<form class="paddingtop" action="/login" method="POST">
+    <!-- 名前：<input type="text" name="username">
+        パスワード：<input type="password" name="pwd">
+        <input type="submit" value="ログインする"> -->
+    <div class="do_login">
+        <div class="cp_iptxt">
+            <input class="ef" type="text" name="username" placeholder="ユーザー名">
+            <!-- <label>ユーザー名</label> -->
+            <span class="focus_line"><i></i></span>
+        </div>
+        <div class="cp_iptxt">
+            <input class="ef" type="password" name="pwd" placeholder="パスワード">
+            <!-- <label>パスワード</label> -->
+            <span class="focus_line"><i></i></span>
+            <input id="register" type="submit" value="ログインする">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

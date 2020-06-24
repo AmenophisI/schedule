@@ -1,0 +1,103 @@
+<!-- 
+
+<div>
+  <p class="paddingtop"></p>
+  <form action="/targetedit" method ="POST">
+    <input type="hidden" value="{{target['targetid']}}" name="item_id">
+    学習目標：<br><textarea name="target" cols="30" rows="5">{{target["target"]}}</textarea><br>
+ 
+    <input type="hidden" value="{{kadai_1_gday['targetid']}}" name="item_2_id">
+    課題期限(1)：<textarea name="kadai_1_gday" cols="30" rows="1">{{kadai_1_gday["kadai_1_gday"]}}</textarea><br>
+ 
+    <input type="hidden" value="{{kadai_1['targetid']}}" name="item_3_id">
+    課題(1)：<textarea name="kadai_1" cols="30" rows="1">{{kadai_1["kadai_1"]}}</textarea>
+<br> 
+
+    <input type="hidden" value="{{kadai_2_gday['targetid']}}" name="item_4_id">
+    課題期限(2)：<textarea name="kadai_2_gday" cols="30" rows="1">{{kadai_2_gday["kadai_2_gday"]}}</textarea><br>
+ 
+    <input type="hidden" value="{{kadai_2['targetid']}}" name="item_5_id">
+    課題(2)：<textarea name="kadai_2" cols="30" rows="1">{{kadai_2["kadai_2"]}}</textarea>
+<br>
+
+    <input type="hidden" value="{{kadai_3_gday['targetid']}}" name="item_6_id">
+    課題期限(3)：<textarea name="kadai_3_gday" cols="30" rows="1">{{kadai_3_gday["kadai_3_gday"]}}</textarea><br>
+
+    <input type="hidden" value="{{kadai_3['targetid']}}" name="item_7_id">
+    課題(3)：<textarea name="kadai_3" cols="30" rows="1">{{kadai_3["kadai_3"]}}</textarea>
+    <br> 
+
+    <input type="hidden" value="{{kadai_4_gday['targetid']}}" name="item_8_id">
+    課題期限(4)：<textarea name="kadai_4_gday" cols="30" rows="1">{{kadai_4_gday["kadai_4_gday"]}}</textarea><br>
+ 
+    <input type="hidden" value="{{kadai_4['targetid']}}" name="item_9_id">
+    課題(4)：<textarea name="kadai_4" cols="30" rows="1">{{kadai_4["kadai_4"]}}</textarea>
+<br>
+
+    <input type="hidden" value="{{kadai_5_gday['targetid']}}" name="item_10_id">
+    課題期限(5)：<textarea name="kadai_5_gday" cols="30" rows="1">{{kadai_5_gday["kadai_5_gday"]}}</textarea><br>
+
+    <input type="hidden" value="{{kadai_5['targetid']}}" name="item_11_id">
+    課題(5)：<textarea name="kadai_5" cols="30" rows="1">{{kadai_5["kadai_5"]}}</textarea>
+
+    <br>
+<br>    -->
+    <!-- <input type="hidden" value="{{kadai_1['targetid']}}" name="item_2_id">
+    課題(1)：<input type="text" name="kadai_1" value="{{kadai_1['kadai_1']}}"><br> -->
+    <!-- <input type="submit" name="save" value="変更する">
+  </form>
+</div>
+
+ -->
+
+{% extends "base.html"%}
+{% block content %}
+
+<form action="/targetedit" method="POST">
+
+  <div class="target">
+    <p>目標名</p>
+    <!-- textareaをinput textにしてます -->
+    <input type="hidden" value="{{target['targetid']}}" name="item_id">
+    <br><textarea class="target_edit_big" name="target" cols="30" rows="3">{{target["target"]}}</textarea><br>
+    <div class="target_schedule">
+      <p class="small_target" style="font-size: 27px;">課題</p>
+      <div class="first">
+        <div>
+          <input type="hidden" value="{{kadai_1_gday['targetid']}}" name="item_2_id">
+          <textarea class="target_by_day" name="kadai_1_gday" cols="30" rows="1">{{kadai_1_gday["kadai_1_gday"]}}</textarea><br>
+          <p>までに</p>
+        </div>
+        <input type="hidden" value="{{kadai_1['targetid']}}" name="item_3_id">
+        <textarea class="targetedit" name="kadai_1" cols="30" rows="4">{{kadai_1["kadai_1"]}}</textarea>
+        <br>
+      </div>
+      <div class="second">
+        <div>
+          <input type="hidden" value="{{kadai_2_gday['targetid']}}" name="item_4_id">
+          <textarea class="target_by_day" name="kadai_2_gday" cols="30"
+            rows="1">{{kadai_2_gday["kadai_2_gday"]}}</textarea><br>
+          <p>までに</p>
+        </div>
+        <input type="hidden" value="{{kadai_2['targetid']}}" name="item_5_id">
+        <textarea class="targetedit" name="kadai_2" cols="30" rows="4">{{kadai_2["kadai_2"]}}</textarea>
+        <br>
+      </div>
+      <div class="third">
+        <div>
+          <input type="hidden" value="{{kadai_3_gday['targetid']}}" name="item_6_id">
+          <textarea class="target_by_day" name="kadai_3_gday" cols="30"
+            rows="1">{{kadai_3_gday["kadai_3_gday"]}}</textarea><br>
+          <p>までに</p>
+        </div>
+        <input type="hidden" value="{{kadai_3['targetid']}}" name="item_7_id">
+        <textarea class="targetedit" name="kadai_3" cols="30" rows="4">{{kadai_3["kadai_3"]}}</textarea>
+        <br>
+      </div>
+    </div>
+    <input id="save" type="submit" value="登録する">
+
+
+  </div>
+</form>
+{% endblock %}

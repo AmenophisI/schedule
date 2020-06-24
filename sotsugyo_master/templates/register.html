@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+<div class="register">
+    <form action="/register" method="POST">
+        <p class="font">新規登録</p>
+        <div class="register_form">
+            <div class="cp_iptxt">
+                <input class="ef" type="text" placeholder="ユーザー名" name="username">
+                <!-- <label>ユーザー名</label> -->
+                <span class="focus_line"><i></i></span>
+            </div>
+            <div class="cp_iptxt">
+                <input class="ef" type="password" placeholder="パスワード" name="pwd">
+                <!-- <label>パスワード</label> -->
+                <span class="focus_line"><i></i></span>
+            </div>
+            <!-- <div class="cp_iptxt">
+                <input class="ef" type="text" placeholder="パスワード再入力"> -->
+                <!-- <label>パスワード再入力</label> -->
+                <!-- <span class="focus_line"><i></i></span>
+            </div> -->
+            <div class="cp_iptxt">
+                <input class="ef" type="text" placeholder="メールアドレス" name="mailadd">
+                <!-- <label>メールアドレス</label> -->
+                <span class="focus_line"><i></i></span>
+            </div>
+        </div>
+        <input id="register" type="submit" value="登録する">
+    </form>
+
+</div>
+
+{% endblock %}

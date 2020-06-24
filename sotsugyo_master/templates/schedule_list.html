@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block content %}
+<p class="paddingtop"></p>
+
+<div>
+  {% for item in schedule_list %}
+    <div class="schedule">
+      <div class="schedule_day">
+        <p>{{item["schedule_day"]}}</p>
+        <!-- <p>月</p> -->
+      </div>
+      <div class="book_page">
+        <p>{{item["bookname"]}}</p>
+        <p>{{item["schedule_start"]}}~{{item["schedule_end"]}}</p>
+
+      </div>
+    </div>
+    <!-- <input id="save_schedule" type="submit" value="保存"> -->
+  {% endfor %}
+</div>
+{% endblock %}

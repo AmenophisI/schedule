@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% block content %}
+    
+<div class="login_home">
+    {% for item in target_list %}
+    <div class="my_target">
+        <p>目標{{item["target"]}}</p>
+    </div>
+    {% endfor %}
+    <div class="homework">
+        <p class="to_do">今日やること</p>
+        {% for item in todo_list %}
+        <p class="today_book">{{item["bookname"]}}</p>
+        <p class="today_page">{{item["schedule_start"]}}~{{item["schedule_end"]}}</p>
+        {% endfor %}
+
+        <a href="/log"><input id="result" type="submit" value="今日の振り返り"></a>
+    </div>
+
+</div>
+
+{% endblock %}

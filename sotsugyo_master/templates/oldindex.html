@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% block content %}
+
+<header>
+    <nav>
+        <ul class="header_link">
+            <li><a href="/todotop"><i class="fas fa-home fa-2x"></i>ホーム</a></li>
+            <li><a href="/schedule_list"><i class="fas fa-calendar-check fa-2x"></i>スケジュール</a></li>
+            <li><a href="/targettop"><i class="fas fa-bullseye fa-2x"></i>目標</a></li>
+        </ul>
+        <div class="hum_menu">
+            <div class="buns"></div>
+            <div class="patty"></div>
+            <div class="buns"></div>
+        </div>
+
+        <!-- リンク -->
+        <ul class="hum_link">
+            <li><a href="/bookmanage">教材一覧</a></li>
+            <li><a href="/log_list">過去の記録</a></li>
+            <li><a href="/userinfo">ユーザー情報</a></li>
+        </ul>
+    </nav>
+    <script src="./js/app.js"></script>
+</header>
+
+<h1>隼人君待ち</h1>
+
+<a href ="/log">感想・気付きなど</a><br>
+<a href ="/log_list">感想・気付きの確認</a><br>
+<a href ="/targettop">目標の確認</a><br>    
+<a href ="/targetadd">目標の追加</a><br> 
+<a href ="/bookadd">教材の追加</a><br>  
+<a href ="/bookmanage">教材の確認</a><br>
+<a href ="/userinfo">ユーザー情報確認</a><br>
+<a href ="/schedule_list">スケジュール確認</a><br>           
+<a href ="/todotop">todotop</a><br>  
+    
+{% endblock %}

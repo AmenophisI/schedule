@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div>
+  <div class="register">
+    <p class="font">ユーザー情報変更</p>
+    <form action="/useredit" method="POST">
+      <div class="register_form">
+        <div class="cp_iptxt">
+          <input type="hidden" value="{{username['userid']}}" name="item">
+          <input class="ef" type="text" placeholder="ユーザー名" value="{{username['username']}}" name="username">
+          <!-- <label>ユーザー名</label> -->
+          <span class="focus_line"><i></i></span>
+        </div>
+        <div class="cp_iptxt">
+          <input type="hidden" value="{{pwd['userid']}}" name="item_2">
+          <input class="ef" type="text" placeholder="パスワード" value="{{pwd['pwd']}}" name="pwd">
+          <!-- <label>パスワード</label> -->
+          <span class="focus_line"><i></i></span>
+        </div>
+        <!-- <div class="cp_iptxt">
+                    <input class="ef" type="text" placeholder="パスワード再入力">
+                    <!-- <label>パスワード再入力</label> -->
+        <!-- <span class="focus_line"><i></i></span>
+                </div> -->
+        <div class="cp_iptxt">
+          <input type="hidden" value="{{mailadd['userid']}}" name="item_3">
+          <input class="ef" type="text" placeholder="メールアドレス" value="{{mailadd['mailadd']}}" name="mailadd">
+          <!-- <label>メールアドレス</label> -->
+          <span class="focus_line"><i></i></span>
+        </div>
+      </div>
+      <input id="register" type="submit" name="save" value="変更する">
+    </form>
+  </div>
+</div>
+
+{% endblock %}

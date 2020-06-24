@@ -1,0 +1,21 @@
+.calculate {
+    padding-top: 120px;
+    display: flex;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+}
+.page{
+    padding-left: 105px;
+}
+#save{
+    font-size: 20px;
+    width: 332px;
+    height: 68px;
+    margin-top: 80px;
+    background-color: white;
+    border-bottom: 4px solid gray;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px -2px #555,
+    3px 3px 8px rgba(255, 255, 255, 0.8) inset;
+    margin-left: 20px;
+}
